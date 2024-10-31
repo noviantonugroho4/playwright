@@ -22,8 +22,4 @@ npx playwright test
 
 ## Capabilities
 
-To running testing, run:
-
-```bash
-npx playwright test
-```
+- Leverage AI (openAI) for auto get elements 
