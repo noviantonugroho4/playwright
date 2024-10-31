@@ -1,6 +1,6 @@
 # Playwright Boilerplate
 
-To support you to enable Web automation testing using Playwright.
+To support you for enable Web automation testing using Playwright.
 
 ## Installation
 
