@@ -1,6 +1,6 @@
 # Playwright Boilerplate
 
-![Results](https://github.com/noviantonugroho4/xero/blob/main/pic/playwright.png?raw=true)
+![playwright](https://github.com/noviantonugroho4/playwright_ts/blob/main/pic/playwright.png?raw=true)
 
 To support you for enable Web automation testing using Playwright.
 
