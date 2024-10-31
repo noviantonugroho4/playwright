@@ -1,0 +1,19 @@
+{
+  "name": "playwright_ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Novianto Nugroho",
+  "license": "ISC",
+  "description": "Just playing with Playwright",
+  "dependencies": {
+    "@playwright/test": "^1.48.2",
+    "@types/js-yaml": "^4.0.9",
+    "dotenv": "^16.4.5",
+    "openai": "^4.69.0",
+    "playwright": "^1.48.2"
+  }
+}
