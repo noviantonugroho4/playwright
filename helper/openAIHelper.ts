@@ -12,7 +12,7 @@ async function getCommandFromChatGPT(userPrompt: string, pageSource: string) {
                 { role: "system", content: "You are a JSON formatter. You must respond ONLY in JSON format without any extra text or explanation." },
                 { role: "user", content: `Analyze this prompt: "${userPrompt}" along with the HTML source provided. Respond strictly in the following JSON format without any additional text:\n\n{
                   "action": "fill" or "click",
-                  "target": "<ID, CSS selector or XPath>",
+                  "target": "<CSS selector or XPath or ID that exists in the HTML>",
                   "value": "<text to fill, if action is 'fill'>"
                 }\n\nHTML:\n${pageSource}` }
             ]
@@ -51,11 +51,11 @@ async function getCommandFromChatGPT(userPrompt: string, pageSource: string) {
 
 async function executeCommand(command: { action: string; target: string; value?: string }, page: any) {
     if (command.action === "fill") {
-        await page.waitForSelector(command.target, { timeout: 2000 });
+        await page.waitForSelector(command.target, { timeout: 10000 });
         await page.fill(command.target, command.value as string);
         console.log(`Filled ${command.target} with ${command.value}`);
     } else if (command.action === "click") {
-        await page.waitForSelector(command.target, { timeout: 2000 });
+        await page.waitForSelector(command.target, { timeout: 10000 });
         await page.click(command.target);
         console.log(`Clicked ${command.target}`);
     } else {
